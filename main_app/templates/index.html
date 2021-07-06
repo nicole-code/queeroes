@@ -9,6 +9,22 @@
     {% extends 'base.html' %}
     {% block content %}
     <h1>All the Queeroes!</h1>
+
+    {% for queero in queeroes %}
+    <div class="card">
+    <a href="/queeroes/{{ queero.id }}">
+        <div class="card-content">
+          <span class="card-title">{{ queero.name }}</span>
+          <p>Occupation: {{ queero.occupation }}</p>
+          <p>Biography: {{ queero.biography }}</p>
+          <p>Legacy: {{ queero.legacy }}</p>  
+        </div>
+        </a>
+        </div>
+          {% endfor %}
+
     {% endblock %}
+
+    
 </body>
 </html>

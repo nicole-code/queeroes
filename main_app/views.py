@@ -2,6 +2,7 @@ from django.shortcuts import render
 
 # Add the following import
 from django.http import HttpResponse
+from .models import Queero
 
 # Define the home view
 def home(request):
@@ -11,9 +12,12 @@ def about(request):
     return render(request, 'about.html')
 
 def queero_index(request):
-    return render(request, 'index.html')
+    queero = Queero.objects.all()
+    return render(request, 'index.html', {'queeroes': queero})
 
-# { 'queeroes': queeroes }    
+def queero_detail(request, queero_id):
+    queero = Queero.objects.get(id=queero_id)
+    return render(request, 'queeroes.html', {'queeroes' : queero})  
 
 
 
