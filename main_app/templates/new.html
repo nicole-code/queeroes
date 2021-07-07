@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Add A New Queero</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block content %}
+    <form method="POST" action="/queeroes_submit/">
+        {% csrf_token %}
+        Name: <input name="name"> 
+        Occupation: <input name="occupation">
+        Biography: <input name="biography">
+        Legacy: <input name="legacy">
+        <button type="submit">Add Queero</button>
+    </form>
+
+
+   
+
+{% endblock %}
+</body>
+</html>

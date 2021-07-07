@@ -4,13 +4,42 @@ body {
     flex-direction: column;
   }
   
-  main {
+#homebody {
+  align-items: center;
+  background-image: url('../images/loe.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+
+}  
+
+main {
     flex: 1 0 auto;
-  }
+}
   
-  .nav-wrapper, .left, .right, .page-footer {
+.nav-wrapper, .left, .right, .page-footer {
     background-color: #F3DAF5;
     padding-top: 0;
     text-align: right;
-  }
+}
 
+
+
+.homebutton {
+  padding: 4px 12px 4px 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: grey;
+  text-decoration: none;
+  max-width: 13rem;
+  background-color: white;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+
+.homebutton:hover {
+  background-color: #F5E2F6;
+}
