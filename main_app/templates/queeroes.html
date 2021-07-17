@@ -16,10 +16,29 @@
             <a class="homebutton" href="/queeroes/{{queeroes.id}}/edit/">Edit This Queero</a>
           </div>
   </div>
+
+ <div class="card">
+  <div class="card-content">  
+    <p>Add A Quote for Queero {{queeroes.name}} </p>
+      <div class="form-class">
+        <form method="POST" action="/queeroes/{{queeroes.id}}/submit-quote/">
+        {% csrf_token %}
+        Quote: <input name="quote"> 
+        <button class="homebutton" type="submit">Add A Quote</button>
+      </form>
+    </div>  
+  </div>  
+</div> 
+
+<div class ="card">
     <div class ="card-content">
+      {{queeroes.name}} Quotes
       {% for banana in quotes %}
-      <p>Quotes: {{ banana.quote }}</p>
+      <p>{{ banana.quote }}</p>
       {% endfor %}
     </div>
+</div>    
+
+
 
   {% endblock %}

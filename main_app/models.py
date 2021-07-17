@@ -7,6 +7,10 @@ class Queero(models.Model):
   biography = models.TextField(max_length=2000)
   legacy = models.TextField(max_length=2000)
 
+  def __str__(self):
+    return f"{self.name}"
+
+
 class Quotes(models.Model):
   quote = models.TextField(max_length=2000)  
   queero = models.ForeignKey(Queero, on_delete=models.CASCADE)

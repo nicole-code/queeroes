@@ -49,3 +49,11 @@ def queero_update(request, queero_id):
     queero.legacy= request.POST['legacy']
     queero.save()
     return redirect(f'/queeroes/{queero.id}')
+
+def add_queero_quote(request, queero_id):
+    queero = Queero.objects.get(id=queero_id)
+    Quotes.objects.create(
+        quote=request.POST['quote'],
+        queero_id=queero_id,
+    )
+    return redirect(f'/queeroes/{queero.id}')
