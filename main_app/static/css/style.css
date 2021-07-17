@@ -1,8 +1,13 @@
 body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: 'Shrikhand', cursive;
+  font-size: large;
+  color: #E2B6CF;
+  word-spacing: 5px;
+  background-image: url('../images/rainbow.jpg');
+}
   
 #homebody {
   align-items: center;
@@ -11,20 +16,38 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-
 }  
+
+#editdelete {
+  align-items: center;
+  background-color: #F6EFEE ;
+}
 
 main {
     flex: 1 0 auto;
 }
   
 .nav-wrapper, .left, .right, .page-footer {
-    background-color: #F3DAF5;
-    padding-top: 0;
-    text-align: right;
+  background-color: #E2B6CF;
+  padding-top: 0;
+  text-align: right;
 }
 
+nav .brand-logo {
+  color: #F6EFEE;
+}
 
+nav ul a {
+  color: #F6EFEE;
+}
+
+.card{
+  margin-top: 30px;
+}
+
+.form-class {
+  margin-top: 30px;
+}
 
 .homebutton {
   padding: 4px 12px 4px 12px;
@@ -42,4 +65,16 @@ main {
 
 .homebutton:hover {
   background-color: #F5E2F6;
+}
+
+.card-content {
+  background-color: #F6EFEE;
+  color: #e2b6cf;
+  font-family: 'Roboto', sans-serif;
+}
+
+#about {
+  display: inline-block;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
 }

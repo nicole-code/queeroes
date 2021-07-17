@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 
 # Add the following import
 from django.http import HttpResponse
-from .models import Queero
+from .models import Queero, Quotes
 
 # Define the home view
 def home(request):
@@ -17,7 +17,8 @@ def queero_index(request):
 
 def queero_detail(request, queero_id):
     queero = Queero.objects.get(id=queero_id)
-    return render(request, 'queeroes.html', {'queeroes' : queero})  
+    quote = queero.quotes_set.all()
+    return render(request, 'queeroes.html', {'queeroes' : queero , 'quotes': quote})  
 
 def queero_new(request):
     return render(request, 'new.html')    

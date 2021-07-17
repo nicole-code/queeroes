@@ -1,12 +1,14 @@
 
 {% extends 'base.html' %}
 {% block content %}
+<div class="form-class">
     <form method="POST" action="/queeroes/{{ queeroes.id }}/submit_update_form/">
         {% csrf_token %}
         Name: <input name="name" value="{{ queeroes.name }}"> 
         Occupation: <input name="occupation" value="{{ queeroes.occupation }}" >
         Biography: <input name="biography" value="{{ queeroes.biography }}" >
         Legacy: <input name="legacy" value="{{ queeroes.legacy }}" >
-        <button type="submit">Edit Queero</button>
+        <button class="homebutton" type="submit">Edit Queero</button>
     </form>  
+</div>    
 {% endblock %}
