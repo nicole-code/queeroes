@@ -3,6 +3,7 @@ from . import views
 
 urlpatterns = [
     path('', views.home, name='home'),
+    path('login/', views.login_user, name='login'),
     path('about/', views.about, name='about'),
     path('index/', views.queero_index, name='index'),
     path('queeroes/<int:queero_id>/', views.queero_detail, name='detail'),
@@ -11,5 +12,6 @@ urlpatterns = [
     path('queeroes/<int:queero_id>/delete/', views.queero_delete, name='deletequeero'),
     path('queeroes/<int:queero_id>/edit/', views.queero_edit, name='editqueero'),
     path('queeroes/<int:queero_id>/submit_update_form/', views.queero_update, name='updatequeero'),
-    path('queeroes/<int:queero_id>/submit-quote/', views.add_queero_quote, name='addqueeroquote')
+    path('queeroes/<int:queero_id>/submit-quote/', views.add_queero_quote, name='addqueeroquote'),
+
 ]

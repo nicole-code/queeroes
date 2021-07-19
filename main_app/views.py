@@ -9,10 +9,10 @@ def home(request):
     return render(request, 'home.html')
 
 def about(request):
+    # ASSOCIATING ALAN TURNING WITH BISEXUAL COMMUNITY 
     q = Queero.objects.get(id=1)
     c = Community.objects.get(id=1)
-    q.Community.add(c)
-    
+    q.communities.add(c)
     return render(request, 'about.html')
 
 def queero_index(request):
@@ -61,3 +61,6 @@ def add_queero_quote(request, queero_id):
         queero_id=queero_id,
     )
     return redirect(f'/queeroes/{queero.id}')
+
+def login_user(request):
+    return render(request, 'registration/login.html')    
